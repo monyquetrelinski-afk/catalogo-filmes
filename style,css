@@ -1,13 +1,167 @@
-body{
-    background-color: pink
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.cabecalho{
- margin-bottom: 0px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-border: 2px solid green;
-background-image: url(wp9212011.jpg);
-background-size: cover;
-background-position: 50% 75%;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background-color: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    border-bottom: 3px solid #e50914;
+}
+
+.cabecalho-titulo {
+    color: #e50914;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.cabecalho-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.filmes {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* CARDS DOS FILMES */
+.Filme-1,
+.Filme-2,
+.Filme-3 {
+    background-color: #222222;
+    width: 30%;
+    min-width: 260px;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.Filme-1:hover,
+.Filme-2:hover,
+.Filme-3:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.3);
+}
+
+/* TÍTULOS DOS FILMES */
+.filmes h2 {
+    color: #e50914;
+    font-size: 21px;
+    margin-bottom: 20px;
+    min-height: 55px;
+}
+
+/* IMAGENS DOS FILMES */
+.imagem-filme-1,
+.imagem-filme-2,
+.imagem-filme-3 {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* SINOPSES */
+.filmes p {
+    color: #dddddd;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #080808;
+    border-top: 3px solid #e50914;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.rodape p {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* LOGOS DAS PLATAFORMAS */
+.logo-netflix,
+.logo-disney,
+.logo-prime {
+    width: 90px;
+    height: 45px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-netflix:hover,
+.logo-disney:hover,
+.logo-prime:hover {
+    transform: scale(1.15);
+}
+
+/* RESPONSIVIDADE - CELULARES */
+@media (max-width: 768px) {
+
+    .cabecalho-titulo {
+        font-size: 30px;
+    }
+
+    .filmes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Filme-1,
+    .Filme-2,
+    .Filme-3 {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .imagem-filme-1,
+    .imagem-filme-2,
+    .imagem-filme-3 {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .rodape {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
